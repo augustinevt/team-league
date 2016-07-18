@@ -5,6 +5,10 @@ require('sinatra/activerecord')
 require('team')
 require('player')
 require('pry')
+require('./app')
+
+Capybara.app = Sinatra::Application
+set(:show_exceptions, false)
 
 RSpec.configure do |config|
   config.after(:each) do

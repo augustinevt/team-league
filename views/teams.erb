@@ -1,0 +1,12 @@
+<h1>teams <%= @user_type %> </h1>
+
+
+<% if @user_type == 'lm' %>
+  <% @teams.each() do |team| %>
+    <h4><a href="/team/<%= team.id() %>"><%= team.name %></a></h4>
+  <% end %>
+<% elsif @user_type == 'tc' %>
+  <% @teams.each() do |team| %>
+    <h4><a href="/sign_in"><%= team.name %></a></h4>
+  <% end %>
+<% end %>
